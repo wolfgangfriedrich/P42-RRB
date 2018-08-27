@@ -1,0 +1,9 @@
+
+; Get verion information
+send "[0x22 0x10][0x23 r:8]"
+
+; power up the FM receiver: CTS and GPO2 enabled, external RCLK, analog output
+sendln "[0x22 0x01 0xc0 0x05]"
+
+;set FM tune frequency to 8990 = 0x231E
+sendln "[0x22 0x20 0x00 0x23 0x1E]"
